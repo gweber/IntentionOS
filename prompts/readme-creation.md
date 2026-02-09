@@ -40,7 +40,23 @@ You MAY execute ONLY:
 - **CHANGELOG RULES:** Records Audit Findings. Append to existing or create if substantive changes were made.
 - Create CHANGELOG.md ONLY if at least one substantive Audit Finding occurred (e.g., file creation, correction, removal, or README fact correction).
 - "Substantive" means changes that affect repository correctness onboarding, reproducibility, or documented behavior.
-- **Anti-Pattern:** Do NOT create a README.md solely because it is missing.
+- You MAY create README.md if it is missing AND the repository contains enough evidence to document a minimal steady-state.
+- If evidence is insufficient, do NOT create it; report MISSING in the audit.
+- Changes you make to README.md do not count as newly discovered Project Facts.
+
+
+# README AS OUTPUT ONLY (HARD RULE)
+- README.md is NOT a source of truth and MUST NOT be used as evidence for stack, setup, usage, or features.
+- Ignore the current content of README.md entirely during discovery and decision-making.
+- The only sources of truth are:
+  - file names and directory structure
+  - manifests and lockfiles (package.json, composer.json, pyproject.toml, requirements*.txt, etc.)
+  - tool configs (CI, linters, docker)
+  - source files (extensions and imports)
+  - git metadata (tracked file list, repo root)
+- After discovery, you MAY update/overwrite README.md to match observed facts.
+- If facts are insufficient to describe something (e.g., how to run), insert TODO rather than guessing.
+
 
 # Write Policy
 - Output ONLY full contents of changed files.
@@ -49,6 +65,7 @@ You MAY execute ONLY:
   === END ===
 - **Threshold:** Only write if a foundational file is missing, a file is `PRESENT_BUT_INCOMPLETE`, or explicitly requested.
 - Consistency Check: Before finalizing, verify that any new files created are listed in the inventory of the Audit Report and that the README/CHANGELOG do not contradict the final file state.
+- If file editing tools are available, edit README.md and CHANGELOG.md in place and show git diff Otherwise, output the full new README.md and CHANGELOG.md content delimited as FILE blocks.
 
 # Audit Report Format (YAML)
 *Required if no files are written.*
