@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from agent_scripts.core.errors import GuardViolation, ValidationError
+from intent.scripts.core.errors import GuardViolation, ValidationError
 
 
 def ensure_single_workflow(workflow_name: str | None) -> None:

@@ -3,13 +3,13 @@ from __future__ import annotations
 import argparse
 import sys
 
-from agent_scripts.core.engine import run_once
-from agent_scripts.core.errors import GuardViolation, ValidationError
-from agent_scripts.core.logging import log
+from intent.scripts.core.engine import run_once
+from intent.scripts.core.errors import GuardViolation, ValidationError
+from intent.scripts.core.logging import log
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(prog="python -m agent_scripts.run")
+    p = argparse.ArgumentParser(prog="python -m intent.scripts.run")
     p.add_argument("--once", action="store_true", help="Process most recent inbox entry")
     p.add_argument("--intent", help="Run with an explicit intent (does not modify inbox)")
     p.add_argument("--workflow", help="Workflow name override")

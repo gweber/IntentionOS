@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from agent_scripts.core.md_parse import append_inbox_entry, read_inbox_entries
+from intent.scripts.core.md_parse import append_inbox_entry, read_inbox_entries
 
 
 class TestInboxParse(unittest.TestCase):

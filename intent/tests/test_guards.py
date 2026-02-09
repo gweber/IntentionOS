@@ -3,8 +3,8 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-from agent_scripts.core.errors import GuardViolation, ValidationError
-from agent_scripts.core.guards import (
+from intent.scripts.core.errors import GuardViolation, ValidationError
+from intent.scripts.core.guards import (
     ensure_artifact_enforced,
     ensure_single_role_sequence,
     ensure_single_workflow,

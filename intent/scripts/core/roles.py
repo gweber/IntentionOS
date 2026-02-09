@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from agent_scripts.core.errors import GuardViolation, ValidationError
+from intent.scripts.core.errors import GuardViolation, ValidationError
 
 
 @dataclass(frozen=True)

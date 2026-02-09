@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-from agent_scripts.core.io import atomic_append_text
+from intent.scripts.core.io import atomic_append_text
 
 
 DECISION_LINE_RE = re.compile(r"^\s*(?:[-*]\s*)?Decision:\s*(.+?)\s*$")

@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-from agent_scripts.core.io import atomic_write_text
+from intent.scripts.core.io import atomic_write_text
 
 
 SLUG_RE = re.compile(r"[^a-z0-9]+")

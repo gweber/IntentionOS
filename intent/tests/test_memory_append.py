@@ -5,7 +5,7 @@ import unittest
 from datetime import datetime
 from pathlib import Path
 
-from agent_scripts.core.memory import append_assumptions, append_decisions, extract_memory_updates
+from intent.scripts.core.memory import append_assumptions, append_decisions, extract_memory_updates
 
 
 class TestMemoryAppend(unittest.TestCase):

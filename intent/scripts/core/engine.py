@@ -3,20 +3,20 @@ from __future__ import annotations
 from datetime import datetime
 import re
 
-from agent_scripts.core.artifacts import Artifact, artifact_path, build_artifact_markdown, write_artifact
-from agent_scripts.core.config import default_paths
-from agent_scripts.core.errors import ValidationError
-from agent_scripts.core.guards import (
+from intent.scripts.core.artifacts import Artifact, artifact_path, build_artifact_markdown, write_artifact
+from intent.scripts.core.config import bootstrap_docs, default_paths
+from intent.scripts.core.errors import ValidationError
+from intent.scripts.core.guards import (
     ensure_artifact_enforced,
     ensure_single_role_sequence,
     ensure_single_workflow,
 )
-from agent_scripts.core.logging import log
-from agent_scripts.core.md_parse import read_inbox_entries
-from agent_scripts.core.memory import apply_memory_updates, extract_memory_updates
-from agent_scripts.core.roles import RoleStack, validate_role_name
-from agent_scripts.core.state import RunState
-from agent_scripts.core.workflows import choose_workflow
+from intent.scripts.core.logging import log
+from intent.scripts.core.md_parse import read_inbox_entries
+from intent.scripts.core.memory import apply_memory_updates, extract_memory_updates
+from intent.scripts.core.roles import RoleStack, validate_role_name
+from intent.scripts.core.state import RunState
+from intent.scripts.core.workflows import choose_workflow
 
 
 def _select_intent(intent: str | None, once: bool) -> str:
@@ -78,6 +78,8 @@ def run_once(
     print_plan: bool,
 ) -> RunState:
     paths = default_paths()
+    if not dry_run:
+        bootstrap_docs(paths)
     selected_intent_raw = _select_intent(intent=intent, once=once)
     selected_intent, decisions, assumptions = _extract_inline_notes(selected_intent_raw)
     if not selected_intent:

@@ -6,8 +6,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
-from agent_scripts.core.errors import ValidationError
-from agent_scripts.core.io import atomic_append_text, read_text
+from intent.scripts.core.errors import ValidationError
+from intent.scripts.core.io import atomic_append_text, read_text
 
 
 INBOX_LINE_RE = re.compile(

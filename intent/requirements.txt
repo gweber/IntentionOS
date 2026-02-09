@@ -1,0 +1,5 @@
+# Package-level requirements (optional).
+#
+# The project also has a top-level requirements.txt; this file exists to keep
+# the `intent/` package self-contained under the canonical structure.
+openai
