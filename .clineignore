@@ -1,6 +1,7 @@
 .git
 .venv
-prompts/
-docs/company_log
-docs/memory
-prompts.md
+intent/docs/prompts
+intent/docs/company_log
+intent/docs/generated
+intent/docs/prompts.md
+dev/

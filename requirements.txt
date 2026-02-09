@@ -1,1 +1,2 @@
-openai
+# No third-party runtime dependencies.
+

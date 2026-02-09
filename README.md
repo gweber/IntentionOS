@@ -6,8 +6,8 @@ A solo-company system for turning intent into action.
 
 - **Language:** Python
 - **Package Manager:** pip
-- **Tools:** git, openai
-- **Execution System:** `scripts/company_engine.py` (AI-driven, intent-based)
+- **Tools:** git
+- **Execution System:** `python -m agent_scripts.run` (deterministic, intent-based)
 
 ## Setup
 
@@ -16,19 +16,38 @@ A solo-company system for turning intent into action.
 3. Activate: `. .venv/bin/activate`
 4. Install dependencies: `pip install -r requirements.txt`
 5. Set up environment: copy `.env.example` to `.env` (if exists) and fill in values.
-6. Run: `python scripts/company_engine.py "your intent here"`
+6. Run: `python -m agent_scripts.run --intent "your intent here" --dry-run`
+
+## Framework Runner
+
+Run latest inbox entry:
+
+```bash
+python -m agent_scripts.run --once
+```
+
+Run explicit intent with explicit workflow/role:
+
+```bash
+python -m agent_scripts.run --intent "..." --workflow "Friction → Fix" --role "Architect"
+```
+
+Dry run + print plan (no files written):
+
+```bash
+python -m agent_scripts.run --intent "..." --print-plan
+```
 
 ## Usage
 
-- Use `docs/intent_inbox.md` to capture raw intent.
-- Run `scripts/company_engine.py` with a prompt to generate a patch.
-- Review and commit changes.
+- Use `intent/docs/intent_inbox.md` to capture raw intent (append-only).
+- Run the framework runner to produce artifacts in `intent/docs/artifacts/`.
 
 ## Project Facts
 
 - **Purpose:** Turn user intent into executable actions via AI.
 - **Structure:** Minimal, documentation-first, memory-compounding.
-- **Workflows:** See `docs/workflows.md` for execution paths.
+- **Workflows:** See `intent/docs/workflows.md` for execution paths.
 
 ## TODO
 

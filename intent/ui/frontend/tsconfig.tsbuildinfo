@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/eventfilterbar.tsx","./src/components/jobcard.tsx","./src/components/jobtimeline.tsx","./src/components/themetoggle.tsx","./src/lib/api.ts","./src/lib/time.ts","./src/pages/dashboardpage.tsx","./src/pages/jobdetailpage.tsx","./src/pages/settingspage.tsx","./src/state/theme.tsx"],"version":"5.9.3"}
