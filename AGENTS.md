@@ -6,15 +6,15 @@ Core principle: **“A conversation is an interaction to shape.”**
 
 ## Operating hierarchy (highest → lowest)
 
-1. **Company Driver** (`/docs/company_driver.md`)
+1. **Company Driver** (`intent/docs/company_driver.md`)
    - Defines triggers, default bias, and what “progress” means.
-2. **Workflows** (`/docs/workflows.md`)
+2. **Workflows** (`intent/docs/workflows.md`)
    - Pick one workflow per run. It dictates sequence and role order.
-3. **Roles** (`/docs/ai_roles.md`)
+3. **Roles** (`intent/docs/ai_roles.md`)
    - One active role at a time to prevent blended thinking.
-4. **Constraints** (`/docs/ai_constraints.md` + hard rules below)
+4. **Constraints** (`intent/docs/ai_constraints.md` + hard rules below)
    - “Laws of physics” for decisions and execution.
-5. **Memory** (`/docs/memory/*`)
+5. **Memory** (`intent/docs/memory/*`)
    - Decisions, assumptions, rejections, and glossary. Memory makes the system compounding.
 
 If any instruction conflicts, obey the hierarchy above.
@@ -26,9 +26,8 @@ If any instruction conflicts, obey the hierarchy above.
 
 ## Hard rules (non-negotiable)
 
-1. **No DB writes in providers.**
-   - “Providers” (adapters to external services/APIs) may read, cache locally, and validate.
-   - Writes must happen in a dedicated application/service layer with explicit intent and tests.
+1. No persistent writes in adapters/bootstrap.
+   - “Providers/Adapters” (connections to external APIs/LLMs, loaders, bootstrapping code) may read, validate, and locally cache data. Persistent writes (databases, files outside an explicit cache, configuration changes) must occur only in a dedicated application/service layer with explicit intent and tests/guardrails.
 2. **No silent scope expansion.**
    - If scope changes, label it explicitly as a *scope change* and justify it.
 3. **Prefer small steps.**
@@ -38,8 +37,8 @@ If any instruction conflicts, obey the hierarchy above.
 
 ## Minimal run protocol
 
-1. Capture intent in `/docs/intent_inbox.md`.
-2. Select **ONE** workflow from `/docs/workflows.md`.
-3. Activate **ONE** role from `/docs/ai_roles.md` (default: Architect).
-4. Apply constraints from `/docs/ai_constraints.md`.
-5. Produce an artifact and update memory (`/docs/memory/*`) when something is decided.
+1. Capture intent in `intent/docs/intent_inbox.md`.
+2. Select **ONE** workflow from `intent/docs/workflows.md`.
+3. Activate **ONE** role from `intent/docs/ai_roles.md` (default: Architect).
+4. Apply constraints from `intent/docs/ai_constraints.md`.
+5. Produce an artifact and update memory (`intent/docs/memory/*`) when something is decided.
