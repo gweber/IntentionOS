@@ -4,15 +4,15 @@ These rules are designed for fast, reliable solo execution.
 
 ## Non-negotiables
 
-1. **Select ONE workflow** for the run (see `docs/workflows.md`).
-2. **Activate ONE role at a time** (see `docs/ai_roles.md`).
+1. **Select ONE workflow** for the run (see `intent/docs/workflows.md`).
+2. **Activate ONE role at a time** (see `intent/docs/ai_roles.md`).
 3. **Produce at least one artifact** before ending the run.
-4. **Write decisions to memory** (`docs/memory/decisions.md`) whenever a choice changes future work.
+4. **Write decisions to memory** (`intent/memory/decisions.md`) whenever a choice changes future work.
 
 ## Operating discipline
 
 - Work in **small steps** that can be reviewed and reversed.
-- If you discover missing context, **capture it as an assumption** (`docs/memory/assumptions.md`) or request it explicitly.
+- If you discover missing context, **capture it as an assumption** (`intent/memory/assumptions.md`) or request it explicitly.
 - **Do not expand scope silently**. Label scope changes and re-choose a workflow if needed.
 
 ## Stop conditions (kill switch)
