@@ -84,6 +84,7 @@ audit:
 summary:
   missing_critical: []
   missing_recommended: []
+```
 
 # START NOW
 Begin by discovering the repository root and listing tracked files (including dotfiles visibility).
