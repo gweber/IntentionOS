@@ -167,3 +167,86 @@ Decision → Commit
 - A 5-line “Definition of Shipped” attached to that decision
 - Any rejected alternatives recorded in docs/memory/rejections.md
 </expected_artifacts>
+
+## prompt 4
+
+<task>
+Plan the execution of Company Log — Issue #1.
+
+You MUST:
+1) Select exactly ONE workflow: Execution Slice.
+2) Activate exactly ONE role: Architect.
+3) Convert the committed “Definition of Shipped” into a small, finite task list.
+4) Each task must be concrete, checkable, and completable by one person.
+5) Stop after producing the plan. No writing of the newsletter yet.
+
+Do NOT:
+- Revisit or question the decision
+- Add scope
+- Improve the idea
+- Involve other roles
+</task>
+
+<context>
+The output surface is fixed:
+Public weekly “Company Log” newsletter.
+
+The Definition of Shipped for Issue #1 is already recorded in docs/memory/decisions.md.
+
+This step exists only to reduce ambiguity and create momentum.
+</context>
+
+<workflow>
+Execution Slice
+</workflow>
+
+<role>
+Initialize Architect: Reduce the committed output to a minimal, executable plan.
+</role>
+
+<expected_artifacts>
+- A checklist or task list written to docs/workflows.md OR a new file docs/company_log/issue_01_plan.md
+- 3–7 tasks maximum
+- Each task phrased as “Done when …”
+</expected_artifacts>
+
+## prompt 5
+
+<task>
+Produce Company Log — Issue #1 according to the existing execution plan.
+
+You MUST:
+1) Follow the task order defined in docs/company_log/issue_01_plan.md.
+2) Activate roles sequentially and explicitly.
+3) Stop immediately once the Definition of Shipped is satisfied.
+4) Produce a publishable artifact (final newsletter text).
+
+Do NOT:
+- Expand scope
+- Revisit decisions
+- Optimize wording beyond clarity
+- Add future-looking promises
+
+This is a shipping task, not a branding exercise.
+</task>
+
+<context>
+Output surface:
+Public weekly “Company Log” newsletter.
+
+Constraints:
+- This is Issue #1, not a manifesto.
+- Honest > impressive.
+- Concrete > aspirational.
+</context>
+
+<role_sequence>
+1) Initialize Visioneer: Draft the raw content focused on value and honesty.
+2) Initialize Architect: Structure and tighten the draft to meet “shipped” criteria.
+3) Initialize Curator: Finalize, format, and confirm shipped status.
+</role_sequence>
+
+<expected_artifacts>
+- A final Issue #1 newsletter file (e.g. docs/company_log/issue_01.md)
+- A short “Shipped confirmation” note appended to docs/memory/decisions.md
+</expected_artifacts>
