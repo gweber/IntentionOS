@@ -66,6 +66,22 @@ You MAY execute ONLY:
 - **Threshold:** Only write if a foundational file is missing, a file is `PRESENT_BUT_INCOMPLETE`, or explicitly requested.
 - Consistency Check: Before finalizing, verify that any new files created are listed in the inventory of the Audit Report and that the README/CHANGELOG do not contradict the final file state.
 - If file editing tools are available, edit README.md and CHANGELOG.md in place and show git diff Otherwise, output the full new README.md and CHANGELOG.md content delimited as FILE blocks.
+- Only allowed file to create or modify is README.md and CHANGELOG.md
+
+# OUTPUT LENGTH LIMIT (HARD):
+- The complete response MUST NOT exceed 1200 tokens.
+- If content would exceed this limit:
+  - Prioritize correctness and completeness of the README over verbosity.
+  - Compress explanations aggressively.
+  - Replace secondary sections with concise bullet summaries.
+  - Do NOT continue in a follow-up message.
+- If the limit is reached, STOP writing immediately.
+
+# README STYLE CONSTRAINT:
+- README.md must be concise and skimmable.
+- Prefer bullet points over paragraphs.
+- No section may exceed 120 tokens unless strictly necessary.
+- Use placeholders like "TODO" instead of speculative detail.
 
 # Audit Report Format (YAML)
 *Required if no files are written.*
@@ -85,6 +101,7 @@ summary:
   missing_critical: []
   missing_recommended: []
 ```
+
 
 # START NOW
 Begin by discovering the repository root and listing tracked files (including dotfiles visibility).
