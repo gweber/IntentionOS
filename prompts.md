@@ -174,7 +174,7 @@ Decision → Commit
 Plan the execution of Company Log — Issue #1.
 
 You MUST:
-1) Select exactly ONE workflow: Execution Slice.
+1) Select exactly ONE workflow: execution_slice.
 2) Activate exactly ONE role: Architect.
 3) Convert the committed “Definition of Shipped” into a small, finite task list.
 4) Each task must be concrete, checkable, and completable by one person.
@@ -197,7 +197,7 @@ This step exists only to reduce ambiguity and create momentum.
 </context>
 
 <workflow>
-Execution Slice
+execution_slice
 </workflow>
 
 <role>
