@@ -1,4 +1,6 @@
 .git
+.venv
+prompts/
 docs/company_log
 docs/memory
 prompts.md

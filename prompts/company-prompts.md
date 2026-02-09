@@ -1,4 +1,5 @@
 # prompt 1
+**The purpose of this document is to provide example prompts to drive the company.**
 
 <task>
 Bootstrap a fresh repository into an intent-driven, self-running solo-company system.
