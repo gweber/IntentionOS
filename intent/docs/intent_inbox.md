@@ -35,3 +35,4 @@ Guidelines:
 ## Entries
 
 2026-02-09 09:12 — Seed: run the framework once to verify artifacts/memory paths are correct #seed
+2026-02-09 21:31 — Add config.yaml + Config UI to manage multiple LLM profiles without storing secrets #config #ui

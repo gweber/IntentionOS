@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
 import DashboardPage from './pages/DashboardPage'
 import JobDetailPage from './pages/JobDetailPage'
+import ConfigPage from './pages/ConfigPage'
 import SettingsPage from './pages/SettingsPage'
 import ThemeToggle from './components/ThemeToggle'
 
@@ -39,6 +40,7 @@ export default function App() {
 
           <nav className="flex items-center gap-1" aria-label="Primary">
             <NavItem to="/" label="Dashboard" />
+            <NavItem to="/config" label="Config" />
             <NavItem to="/settings" label="Settings" />
           </nav>
 
@@ -52,6 +54,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/jobs/:jobId" element={<JobDetailPage />} />
+          <Route path="/config" element={<ConfigPage />} />
           <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </main>

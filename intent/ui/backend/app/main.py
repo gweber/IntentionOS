@@ -10,6 +10,7 @@ from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from .api.config import router as config_router
 from .api.jobs import router as jobs_router
 from .config import settings
 from .errors import ApiError
@@ -71,6 +72,7 @@ def create_app() -> FastAPI:
         return {"ok": True}
 
     app.include_router(jobs_router)
+    app.include_router(config_router)
 
     # Prod-ish: serve built frontend if present at /ui
     dist = Path(__file__).resolve().parents[2] / "frontend" / "dist"

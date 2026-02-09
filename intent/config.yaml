@@ -1,0 +1,11 @@
+version: 1
+llms:
+  active: default
+  profiles:
+    - id: default
+      label: Default
+      provider: openai_compatible
+      base_url: https://api.openai.com/v1
+      model: gpt-4o-mini
+      api_key_env: OPENAI_API_KEY
+      headers: {}
