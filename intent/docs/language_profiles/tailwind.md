@@ -1,4 +1,4 @@
-# Identity: tailwind
+# Language Profile: tailwind
 
 ## Purpose
 - Enforce consistent, utility-first, and maintainable CSS using Tailwind.
@@ -51,7 +51,7 @@
 - Avoid `@variants` for custom variants.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/tailwind.md`
+- [ ] File exists at `intent/docs/language_profiles/tailwind.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

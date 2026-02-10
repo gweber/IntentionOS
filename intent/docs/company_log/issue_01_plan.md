@@ -3,7 +3,7 @@
 Workflow: **execution_slice**
 Role: **Architect**
 
-Source of truth: “Definition of Shipped” for Issue #1 in `docs/memory/decisions.md`.
+Source of truth: “Definition of Shipped” for Issue #1 in `intent/docs/memory/decisions.md`.
 
 ## Task list (3–7)
 

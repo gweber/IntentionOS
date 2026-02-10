@@ -1,4 +1,4 @@
-# Identity: sql
+# Language Profile: sql
 
 ## Purpose
 - Enforce safe, performant, and maintainable SQL queries.
@@ -57,7 +57,7 @@
 - Avoid `UNION` without `ALL` when duplicates are acceptable.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/sql.md`
+- [ ] File exists at `intent/docs/language_profiles/sql.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

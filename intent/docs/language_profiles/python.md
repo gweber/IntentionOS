@@ -1,4 +1,4 @@
-# Identity: python
+# Language Profile: python
 
 ## Purpose
 - Enforce clean, readable, and maintainable Python code.
@@ -57,7 +57,7 @@
 - Avoid `global` state in modules.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/python.md`
+- [ ] File exists at `intent/docs/language_profiles/python.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

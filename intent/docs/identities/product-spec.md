@@ -1,4 +1,4 @@
-# Identity: product-spec
+# Language Profile: product-spec
 
 ## Purpose
 - Enforce consistent, actionable, and user-centered product specification practices.
@@ -51,7 +51,7 @@
 - Avoid `We need Z` without a user impact.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/product-spec.md`
+- [ ] File exists at `intent/docs/language_profiles/product-spec.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

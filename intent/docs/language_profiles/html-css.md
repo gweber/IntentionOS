@@ -1,4 +1,4 @@
-# Identity: html-css
+# Language Profile: html-css
 
 ## Purpose
 - Enforce consistent, accessible, and maintainable HTML and CSS.
@@ -52,7 +52,7 @@
 - Avoid `display: none` for hiding content.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/html-css.md`
+- [ ] File exists at `intent/docs/language_profiles/html-css.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

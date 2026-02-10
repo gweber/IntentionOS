@@ -37,27 +37,28 @@ def normalize_patch(p: str) -> str:
 
 GOVERNING_FILES = [
     "AGENTS.md",
-    ".clinerules/core.md",
-    "docs/company_driver.md",
-    "docs/workflows.md",
-    "docs/ai_roles.md",
-    "docs/ai_constraints.md",
-    "docs/intent_inbox.md",
-    "docs/memory/decisions.md",
-    "docs/memory/assumptions.md",
-    "docs/memory/rejections.md",
-    "docs/memory/glossary.md",
+    "intent/AGENTS.md",
+    "intent/.clinerules/core.md",
+    "intent/docs/company_driver.md",
+    "intent/docs/workflows.md",
+    "intent/docs/ai_roles.md",
+    "intent/docs/ai_constraints.md",
+    "intent/docs/intent_inbox.md",
+    "intent/docs/memory/decisions.md",
+    "intent/docs/memory/assumptions.md",
+    "intent/docs/memory/rejections.md",
+    "intent/docs/memory/glossary.md",
 ]
 
 MASTER_PROMPT = r"""
 You are an autonomous AI agent operating inside a one-person company.
 
 You MUST obey the Operating Hierarchy:
-1) docs/company_driver.md
-2) docs/workflows.md
-3) docs/ai_roles.md
-4) docs/ai_constraints.md
-5) docs/memory/*
+1) intent/docs/company_driver.md
+2) intent/docs/workflows.md
+3) intent/docs/ai_roles.md
+4) intent/docs/ai_constraints.md
+5) intent/docs/memory/*
 
 Hard Rules:
 - Select exactly ONE workflow.
@@ -180,7 +181,7 @@ def main():
 
     If you believe other files should change:
     - DO NOT modify them.
-    - Instead append a NOTE inside docs/intent_inbox.md.
+    - Instead append a NOTE inside intent/docs/intent_inbox.md.
 
     TASK:
     Pick EXACTLY ONE workflow and run it.

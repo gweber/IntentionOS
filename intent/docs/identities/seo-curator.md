@@ -44,7 +44,7 @@
 - Avoid `alt` text for keywords only.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/seo-curator.md`
+- [ ] File exists at `intent/docs/language_profile/seo-curator.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

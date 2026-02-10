@@ -48,7 +48,7 @@
 - Avoid `[]` without a target.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/tech-writer.md`
+- [ ] File exists at `intent/docs/identities/tech-writer.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

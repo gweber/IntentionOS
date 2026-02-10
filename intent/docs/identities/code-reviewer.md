@@ -47,7 +47,7 @@
 - Avoid `I don’t like this` without reasoning.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/code-reviewer.md`
+- [ ] File exists at `intent/docs/identities/code-reviewer.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

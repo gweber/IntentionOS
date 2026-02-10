@@ -1,4 +1,4 @@
-# Identity: livewire
+# Language Profile: livewire
 
 ## Purpose
 - Enforce consistent, performant, and maintainable Livewire component structure.
@@ -49,7 +49,7 @@
 - Avoid `@input` without `wire:model`.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/livewire.md`
+- [ ] File exists at `intent/docs/language_profiles/livewire.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

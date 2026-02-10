@@ -1,4 +1,4 @@
-# Identity: bash
+# Language Profile: bash
 
 ## Purpose
 - Enforce safe, portable, and maintainable shell scripting.
@@ -57,7 +57,7 @@
 - Avoid `$(cat file)` on large files.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/bash.md`
+- [ ] File exists at `intent/docs/language_profiles/bash.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

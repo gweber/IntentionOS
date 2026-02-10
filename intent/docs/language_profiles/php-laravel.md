@@ -1,4 +1,4 @@
-# Identity: php-laravel
+# Language Profile: php-laravel
 
 ## Purpose
 - Enforce consistent Laravel application structure and development practices.
@@ -61,7 +61,7 @@
 - Avoid `->get()` on large result sets without pagination.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/php-laravel.md`
+- [ ] File exists at `intent/docs/language_profiles/php-laravel.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

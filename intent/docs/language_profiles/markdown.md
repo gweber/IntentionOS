@@ -1,4 +1,4 @@
-# Identity: markdown
+# Language Profile: markdown
 
 ## Purpose
 - Enforce consistent, readable, and maintainable Markdown documentation.
@@ -48,7 +48,7 @@
 - Avoid `[]` without a target.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/markdown.md`
+- [ ] File exists at `intent/docs/language_profiles/markdown.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

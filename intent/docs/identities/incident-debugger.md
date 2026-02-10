@@ -54,7 +54,7 @@
 - Avoid `@` to escalate without context.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/incident-debugger.md`
+- [ ] File exists at `intent/docs/identities/incident-debugger.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules

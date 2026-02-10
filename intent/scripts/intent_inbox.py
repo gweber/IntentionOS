@@ -29,7 +29,7 @@ from openai import OpenAI
 
 ROOT = Path(__file__).resolve().parents[1]
 
-INTENT_INBOX = ROOT / "docs/intent_inbox.md"
+INTENT_INBOX = ROOT / "intent/docs/intent_inbox.md"
 TIMEZONE = ZoneInfo("Europe/Berlin")
 
 PATCH_RE = re.compile(r"<patch>\s*(.*?)\s*</patch>", re.DOTALL)
@@ -49,7 +49,7 @@ def format_intent_line(raw_intent: str) -> str:
 
 
 def append_intent_line(raw_intent: str) -> str:
-    """Append the raw intent to docs/intent_inbox.md and return the written line."""
+    """Append the raw intent to intent/docs/intent_inbox.md and return the written line."""
     INTENT_INBOX.parent.mkdir(parents=True, exist_ok=True)
     line = format_intent_line(raw_intent)
     with INTENT_INBOX.open("a", encoding="utf-8") as f:
@@ -79,27 +79,28 @@ def normalize_patch(p: str) -> str:
 
 GOVERNING_FILES = [
     "AGENTS.md",
+    "intent/AGENTS.md"
     ".clinerules/core.md",
-    "docs/company_driver.md",
-    "docs/workflows.md",
-    "docs/ai_roles.md",
-    "docs/ai_constraints.md",
-    "docs/intent_inbox.md",
-    "docs/memory/decisions.md",
-    "docs/memory/assumptions.md",
-    "docs/memory/rejections.md",
-    "docs/memory/glossary.md",
+    "intent/docs/company_driver.md",
+    "intent/docs/workflows.md",
+    "intent/docs/ai_roles.md",
+    "intent/docs/ai_constraints.md",
+    "intent/docs/intent_inbox.md",
+    "intent/docs/memory/decisions.md",
+    "intent/docs/memory/assumptions.md",
+    "intent/docs/memory/rejections.md",
+    "intent/docs/memory/glossary.md",
 ]
 
 MASTER_PROMPT = r"""
 You are an autonomous AI agent operating inside a one-person company.
 
 You MUST obey the Operating Hierarchy:
-1) docs/company_driver.md
-2) docs/workflows.md
-3) docs/ai_roles.md
-4) docs/ai_constraints.md
-5) docs/memory/*
+1) intent/docs/company_driver.md
+2) intent/docs/workflows.md
+3) intent/docs/ai_roles.md
+4) intent/docs/ai_constraints.md
+5) intent/docs/memory/*
 
 Hard Rules:
 - Select exactly ONE workflow.
@@ -124,8 +125,8 @@ If you cannot comply, return an empty patch:
 WRITE PERMISSIONS OVERRIDE:
 If the user message contains "WRITE PERMISSIONS", you MUST treat it as a hard constraint.
 Never modify files outside that list.
-When asked to "suggest a workflow", you MUST NOT edit docs/workflows.md.
-You must store the selected workflow as metadata in docs/intent_inbox.md (e.g. #workflow=<NAME>).
+When asked to "suggest a workflow", you MUST NOT edit intent/docs/workflows.md.
+You must store the selected workflow as metadata in intent/docs/intent_inbox.md (e.g. #workflow=<NAME>).
 
 INTENT INBOX FORMAT (MANDATORY WHEN WRITING TO docs/intent_inbox.md):
 - Append-only. Never rewrite or reorder existing entries.

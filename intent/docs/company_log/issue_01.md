@@ -27,7 +27,7 @@ Make shipping unambiguous: define what “shipped” means for this newsletter, 
 
 Right now, this is a local draft.
 
-What’s still missing to make Issue #1 truly “shipped” (per the definition in `docs/memory/decisions.md`):
+What’s still missing to make Issue #1 truly “shipped” (per the definition in `intent/memory/decisions.md`):
 
 - Publishing surface + stable public URL (TBD)
 - Email subscription end-to-end test (TBD)

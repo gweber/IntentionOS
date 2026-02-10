@@ -1,4 +1,4 @@
-# Identity: typescript
+# Language Profile: typescript
 
 ## Purpose
 - Enforce strict, safe, and maintainable TypeScript codebases.
@@ -49,7 +49,7 @@
 - Avoid `Promise.all()` on unbounded arrays.
 
 ## Definition of Done
-- [x] File exists at `docs/identities/typescript.md`
+- [x] File exists at `intent/docs/language_profiles/typescript.md`
 - [x] Follows template exactly
 - [x] Includes `Definition of Done` checklist
 - [x] Uses `DO`/`DO NOT` in Hard Rules

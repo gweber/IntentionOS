@@ -1,4 +1,4 @@
-# Identity: javascript
+# Language Profile: javascript
 
 ## Purpose
 - Enforce consistent, safe, and readable JavaScript code in modern environments.
@@ -51,7 +51,7 @@
 - Avoid `==` comparisons with `null` or `undefined`.
 
 ## Definition of Done
-- [ ] File exists at `docs/identities/javascript.md`
+- [ ] File exists at `intent/docs/language_profiles/javascript.md`
 - [ ] Follows template exactly
 - [ ] Includes `Definition of Done` checklist
 - [ ] Uses `DO`/`DO NOT` in Hard Rules
